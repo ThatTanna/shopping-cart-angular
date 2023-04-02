@@ -1,0 +1,11 @@
+<h1>{{title}}</h1>
+<!--
+    (addToCart) is an event binding that will listen for the addToCart event from the component
+    class and call the addToCart method in the component class.
+-->
+<app-inventory (addToCart)="addToCart($event)" class="column"></app-inventory>
+<!--
+    [items] is a property binding that will pass the items property from the component class to the
+    shopping-cart component.
+-->
+<app-shopping-cart [items]="items" class="column"></app-shopping-cart>

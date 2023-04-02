@@ -1,0 +1,10 @@
+<p>Please Select</p>
+
+<div class="center" *ngFor="let item of items">
+        <img src="{{item.imgUrl}}" alt="{{item.name}}" />
+        {{item.name}}
+        <!--(click) triggers event in child "onAdd(item)"
+        Pass item to parent first-->
+        <button mat-fab (click)="onAdd(item)">
+                <mat-icon>add_shopping_cart</mat-icon></button>
+</div>

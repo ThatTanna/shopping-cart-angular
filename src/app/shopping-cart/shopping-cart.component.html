@@ -1,0 +1,10 @@
+<p>My Cart</p>
+
+<div *ngIf="items.length==0">
+        <p>Cart is empty</p>
+</div>
+<div class="center" *ngFor="let item of items">
+        <img src="{{item.imgUrl}}" alt="{{item.name}}"/>
+        {{item.name}}
+        <button mat-fab (click)="removeFromCart(item)"><mat-icon>remove_shopping_cart</mat-icon></button>
+</div>
